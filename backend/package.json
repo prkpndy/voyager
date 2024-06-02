@@ -1,0 +1,28 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Backend APIs for Voyager clone",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
+    },
+    "author": "Prakhar Pandey",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "fastify": "^4.27.0",
+        "fastify-plugin": "^4.5.1",
+        "mongoose": "^8.4.0",
+        "pg": "^8.11.5",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.37.3"
+    },
+    "devDependencies": {
+        "eslint": "^9.3.0",
+        "pino-pretty": "^11.1.0",
+        "prettier": "^3.2.5"
+    }
+}

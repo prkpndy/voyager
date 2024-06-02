@@ -1,0 +1,48 @@
+### get data for all transactions in a specific block
+
+POST https://free-rpc.nethermind.io/mainnet-juno
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "starknet_getBlockWithTxs",
+  "params": [
+    {
+      "block_number": 643101
+    }
+  ],
+  "id": 1
+}
+
+### get the latest block number
+
+POST https://free-rpc.nethermind.io/mainnet-juno
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "starknet_blockNumber",
+  "params": [],
+  "id": 1
+}
+
+### get more information about a transaction
+
+POST https://free-rpc.nethermind.io/mainnet-juno
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "starknet_getTransactionReceipt",
+  "params": [
+    "0x30b0013be9343eefa91333ec2ace938a2eef4955102ad2b09ceb030cc6f706e"
+  ],
+  "id": 1
+}
+
+### get the ETH Price from
+
+GET https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd
+
+###
+

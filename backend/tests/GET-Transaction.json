@@ -1,0 +1,55 @@
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "type": "INVOKE",
+        "transaction_hash": "0x30b0013be9343eefa91333ec2ace938a2eef4955102ad2b09ceb030cc6f706e",
+        "actual_fee": { "amount": "0x51850e1201", "unit": "WEI" },
+        "execution_status": "SUCCEEDED",
+        "finality_status": "ACCEPTED_ON_L1",
+        "block_hash": "0xcc60301596192c3d7ca5c74356f64fc36f50c4ab62717ca9ee16e6b86fd3c5",
+        "block_number": 643109,
+        "messages_sent": [],
+        "events": [
+            {
+                "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                "keys": [
+                    "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                ],
+                "data": [
+                    "0x12d0098294f5bef42722f81be98fb700d8331e75d5a590d2c09398a7465b59",
+                    "0x46d60740fd06cb18e568f9e2935daa50f9d3bfbbc5c3b8e7a81d3bd8da425bf",
+                    "0x38d7ea4c67fca",
+                    "0x0"
+                ]
+            },
+            {
+                "from_address": "0x12d0098294f5bef42722f81be98fb700d8331e75d5a590d2c09398a7465b59",
+                "keys": [
+                    "0x1dcde06aabdbca2f80aa51392b345d7549d7757aa855f7e37f5d335ac8243b1",
+                    "0x30b0013be9343eefa91333ec2ace938a2eef4955102ad2b09ceb030cc6f706e"
+                ],
+                "data": ["0x1", "0x1", "0x1"]
+            },
+            {
+                "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                "keys": [
+                    "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                ],
+                "data": [
+                    "0x12d0098294f5bef42722f81be98fb700d8331e75d5a590d2c09398a7465b59",
+                    "0x1176a1bd84444c89232ec27754698e5d2e7e1a7f1539f12027f28b23ec9f3d8",
+                    "0x51850e1201",
+                    "0x0"
+                ]
+            }
+        ],
+        "execution_resources": {
+            "steps": 9027,
+            "pedersen_builtin_applications": 25,
+            "range_check_builtin_applications": 187,
+            "ec_op_builtin_applications": 3,
+            "data_availability": { "l1_gas": 0, "l1_data_gas": 192 }
+        }
+    },
+    "id": 1
+}
