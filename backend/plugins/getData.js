@@ -2,8 +2,8 @@ function cleanAndSaveTransactions(fastify, transactions) {
     for (let transaction of transactions) {
         transaction.max_fee = Number(transaction.max_fee) || null;
         transaction.l1_gas_price = Number(transaction.l1_gas_price) || null;
-        transaction.nonce = Number(transaction.nonce);
-        transaction.version = Number(transaction.version);
+        transaction.nonce = Number(transaction.nonce) || null;
+        transaction.version = Number(transaction.version) || null;
     }
 
     console.log(`--->>> Saving all transactions to MongoDB...`);
