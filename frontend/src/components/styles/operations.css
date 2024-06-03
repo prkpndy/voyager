@@ -1,0 +1,15 @@
+.operations {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+}
+
+.operations a {
+    text-decoration: none;
+    color: rgb(139, 163, 223);
+    cursor: pointer;
+}

@@ -1,0 +1,207 @@
+.div1 {
+    word-break: break-all;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.div2 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    height: 16px;
+    margin-bottom: 0px;
+    word-break: break-all;
+}
+
+.div3 {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    gap: 8px;
+    line-height: 32px;
+    font-weight: 500;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.div4 {
+    width: 100%;
+}
+
+.div5 {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: initial;
+    align-items: initial;
+    -webkit-box-pack: initial;
+    justify-content: initial;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.div6 {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.div7 {
+    padding: 4px 12px 4px 8px;
+    border-radius: 42px;
+    background: rgb(17, 125, 73);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: white;
+    transition: max-width 0.15s ease-out 0s;
+    cursor: pointer;
+}
+
+.div7:hover {
+    padding-inline: 14px;
+}
+
+.div8 {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.svg1 {
+    width: 16px;
+    stroke-width: 3px;
+    fill: none;
+    stroke: white;
+    color: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.div9 {
+    font-size: 11px;
+    line-height: 11px;
+    font-family: Inter;
+    font-weight: 500;
+    word-break: keep-all;
+}
+
+.div10 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 24px;
+}
+
+.div11 {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(17, 125, 73);
+}
+
+.div12 {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+}
+
+.div13 {
+    border-radius: 42px;
+    color: white;
+    height: 32px;
+    width: 32px;
+    max-width: 32px;
+    border: 1px solid rgb(75, 75, 75);
+    background: rgb(27, 27, 27);
+    padding: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: max-width 0.15s ease-out 0s;
+}
+
+.div14 {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.div15 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 50%;
+    display: block;
+}
+
+.svg2 {
+    width: 29px;
+    height: 29px;
+    animation: 2s linear 0s infinite normal none running rotate;
+    color: #bfbfbf;
+}
+
+.circle {
+    stroke: rgb(191, 191, 191);
+    stroke-linecap: round;
+    animation: 1.5s ease-in-out 0s infinite normal none running dash;
+}
+
+.div16 {
+    color: grey;
+    width: 0px;
+    opacity: 0;
+    display: none;
+    transition: display 0.2s ease-out 0s;
+    margin-right: 4px;
+    font-size: 11px;
+    line-height: 11px;
+    font-family: Inter;
+    font-weight: 500;
+    word-break: keep-all;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

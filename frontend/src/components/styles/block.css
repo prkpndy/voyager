@@ -1,0 +1,70 @@
+.block {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    gap: 10px;
+}
+
+.block a {
+    text-decoration: none;
+    color: rgb(139, 163, 223);
+    cursor: pointer;
+}
+
+.block span {
+    text-decoration: none;
+    display: flex;
+    line-height: 24px;
+    -webkit-box-align: center;
+    align-items: center;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.block-copy-div {
+    text-decoration: none;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    bottom: auto;
+    color: rgb(151, 151, 151);
+    cursor: pointer;
+    gap: 5px;
+}
+
+.block svg {
+    margin-left: 0;
+    text-decoration: none;
+    opacity: 0.8;
+    fill: none;
+    stroke: rgb(151, 151, 151);
+    color: rgb(151, 151, 151);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.block-copied {
+    font-size: 0.75rem;
+    /*position: absolute;*/
+    padding: 4px;
+    /*right: -62px;*/
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(56, 56, 56);
+    max-height: 24px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    /*visibility: hidden;*/
+    border-radius: 4px;
+    font-family: "Roboto Mono", monospace;
+    z-index: 10000;
+    text-decoration: none;
+}

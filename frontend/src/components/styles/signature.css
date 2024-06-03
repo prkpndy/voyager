@@ -1,0 +1,33 @@
+.signature__table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    /*grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 7fr);*/
+    border-spacing: 0;
+    text-indent: initial;
+    unicode-bidi: isolate;
+}
+
+.signature__row-content__value {
+    position: relative;
+    width: 100%;
+    padding: 4px;
+    overflow: visible;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(245, 171, 53);
+}
+
+.signature__row-content__value code {
+    color: inherit;
+    line-height: 26px;
+}
+
+table.signature__table tr:hover td {
+    background-color: rgb(56, 56, 56);
+}

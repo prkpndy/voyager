@@ -1,0 +1,48 @@
+.transactions-page__table__type {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    width: fit-content;
+}
+
+.transactions-page__table__type--invoke {
+    border-color: rgb(46, 76, 60);
+    background-color: rgb(32, 46, 38);
+    color: rgb(130, 244, 187);
+}
+
+.transactions-page__table__type--declare {
+    border-color: rgb(107, 125, 7);
+    background-color: rgb(32, 46, 38);
+    color: rgb(254, 255, 181);
+}
+
+.transactions-page__table__type--deploy {
+    border-color: rgb(60, 80, 110);
+    background-color: rgb(34, 54, 85);
+    color: rgb(210, 229, 255);
+}
+
+.transactions-page__table__type--deploy-account {
+    border-color: rgb(60, 80, 110);
+    background-color: rgb(34, 54, 85);
+    color: rgb(210, 229, 255);
+}
+
+.transactions-page__table__type--l1-handler {
+    border-color: rgb(94, 94, 94);
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+}
+
+.transactions-page__table__type--execution-resources {
+    border-color: rgb(88, 63, 42);
+    background-color: rgb(59, 42, 28);
+    color: rgb(255, 200, 153);
+}

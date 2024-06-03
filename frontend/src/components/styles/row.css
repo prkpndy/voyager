@@ -1,0 +1,29 @@
+.row {
+    display: contents;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+table.transactions-page__table tr:hover td {
+    /* .row:hover { */
+    background-color: rgb(56, 56, 56);
+}
+
+.row-content {
+    padding: 4px;
+    margin: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    min-height: 38px;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    white-space: nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    font-family: inherit;
+    font-size: inherit;
+}

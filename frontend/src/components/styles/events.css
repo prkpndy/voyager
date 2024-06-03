@@ -1,0 +1,16 @@
+.events__table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(
+            min-content,
+            1fr
+        );
+    border-spacing: 0;
+    text-indent: initial;
+    unicode-bidi: isolate;
+}

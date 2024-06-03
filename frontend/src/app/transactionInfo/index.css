@@ -1,0 +1,164 @@
+.transaction-info-page {
+    flex: 1 1 0;
+    width: 100vw;
+}
+
+.transaction-info-page__margin {
+    /*position: relative;*/
+    z-index: 0;
+    margin: 48px auto 0;
+    height: 100%;
+    width: 100%;
+    /*width: calc(-48px + 100vw);*/
+    /*max-width: 1354px;*/
+}
+
+.transaction-info-page__wrapper {
+    background-color: rgb(27, 27, 27);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 4px 10px;
+    min-height: 400px;
+    width: 1354px;
+    margin-inline: auto;
+}
+
+.transaction-info-page__heading {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    list-style: none;
+
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 0 24px;
+}
+
+.transaction-info-page__heading div {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: initial;
+    align-items: initial;
+    -webkit-box-pack: initial;
+    justify-content: initial;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.transaction-info-page__heading h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.transaction-info-page__subheading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 24px;
+    margin-bottom: 12px;
+    padding-top: 24px;
+}
+
+.transaction-info-page__subheading__hash {
+    grid-column: span 4;
+    word-break: break-all;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.transaction-info-page__subheading__type {
+    grid-column: span 1;
+    word-break: break-all;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.transaction-info-page__subheading__timestamp {
+    grid-column: span 1;
+    word-break: break-all;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.transaction-info-page__subheading__status {
+    grid-column: span 4;
+    gap: 8px;
+    word-break: break-all;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.transaction-info-page__subheading__heading {
+    text-transform: uppercase;
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.transaction-info-page__content {
+    width: 100%;
+}
+
+.transaction-info-page__content__developer-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.transaction-info-page__content__heading {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.transaction-info-page__section-button {
+    padding-block: 16px;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.transaction-info-page__section-button-info {
+    padding: 5px 8px;
+    background: rgb(18, 18, 18);
+    color: rgb(170, 170, 170);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+}
+
+.transaction-info-page__section-button--active {
+    border-bottom: 2px solid rgb(191, 109, 76);
+}
+
+.transaction-info-page__section-button--dormant:hover {
+    border-bottom: 2px solid rgb(76, 52, 42);
+}

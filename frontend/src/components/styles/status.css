@@ -1,0 +1,13 @@
+.status {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.status svg {
+    fill: none;
+    stroke: currentcolor;
+    color: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

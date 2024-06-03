@@ -1,0 +1,11 @@
+.transaction-info-page__content__transaction-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-info-page__content__transaction-details__row {
+    display: flex;
+    gap: 10px;
+    min-height: 38px;
+    flex-direction: row;
+}

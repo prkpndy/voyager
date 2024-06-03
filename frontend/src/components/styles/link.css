@@ -1,0 +1,30 @@
+.popover-content {
+    border-radius: 5px;
+    padding: 2px;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+    color: #242424;
+    border: none;
+    font-size: 13px;
+    font-family: "Roboto Mono", monospace;
+    background-color: rgb(217, 217, 217);
+    z-index: 10000;
+}
+
+.popover-content[data-state='open'][data-side='top'] {
+    animation-name: slideDownAndFade;
+}
+.popover-content[data-state='open'][data-side='right'] {
+    animation-name: slideLeftAndFade;
+}
+.popover-content[data-state='open'][data-side='bottom'] {
+    animation-name: slideUpAndFade;
+}
+.popover-content[data-state='open'][data-side='left'] {
+    animation-name: slideRightAndFade;
+}
+
+.popover-arrow {
+    fill: rgb(217, 217, 217);
+}

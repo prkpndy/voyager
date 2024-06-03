@@ -1,0 +1,57 @@
+.call-data__row {
+    display: contents;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.call-data__row-content {
+    padding: 4px;
+    margin: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    min-height: 38px;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    white-space: nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    font-family: inherit;
+    font-size: inherit;
+    font-family: "Roboto Mono";
+}
+
+.call-data__row-content__input {
+    position: relative;
+    white-space: pre-wrap;
+    font-family: "Roboto Mono";
+    line-height: 18px;
+    overflow: hidden;
+    max-height: 160px;
+    padding: 4px;
+    color: rgb(245, 171, 53);
+}
+
+.call-data__row-content__value {
+    position: relative;
+    width: 100%;
+    padding: 4px;
+    overflow: visible;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(130, 244, 187);
+}
+
+.call-data__row-content__input code {
+    color: inherit;
+    line-height: 26px;
+}
+
+.call-data__row-content__value code {
+    color: inherit;
+    line-height: 26px;
+}

@@ -1,0 +1,19 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #f3f3f3; /* Light grey */
+    border-top: 7px solid rgb(75, 75, 75); /* Blue */
+    border-radius: 50%;
+    margin: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
