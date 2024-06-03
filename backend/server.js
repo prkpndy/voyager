@@ -35,7 +35,10 @@ fastify.addHook("onRequest", require("./hooks/cors"));
 fastify.register(transactionsController, { prefix: "/api/v1/transactions" });
 
 try {
-    fastify.listen({ port: process.env.PORT || 3000 });
+    fastify.listen({
+        host: process.env.HOST || "127.0.0.1",
+        port: process.env.PORT || 3000,
+    });
 } catch (error) {
     fastify.log.error(error);
     process.exit(1);
