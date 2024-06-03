@@ -1,5 +1,3 @@
-const { voyager } = require("../database/models");
-
 function cleanAndSaveTransactions(fastify, transactions) {
     for (let transaction of transactions) {
         transaction.max_fee = Number(transaction.max_fee) || null;
@@ -38,6 +36,9 @@ async function fetchAndSaveTransactions(fastify, startBlock, endBlock) {
                     ],
                     id: 1,
                 }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
             });
 
             if (response.ok) {
@@ -86,6 +87,9 @@ async function getData() {
                 params: [],
                 id: 1,
             }),
+            headers: {
+                "Content-Type": "application/json",
+            },
         });
 
         if (response.ok) {
