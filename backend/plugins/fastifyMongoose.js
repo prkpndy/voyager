@@ -15,6 +15,12 @@ function fastifySequelizePlugin(fastify) {
     async function decorate() {
         console.log("*** MongoDB connected ***");
 
+        fastify.decorate("CONVERSION_FETCH_GAP", 5 * 60 * 1e3);
+        fastify.decorate(
+            "COINGECKO_API_URL",
+            "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
+        );
+
         fastify.decorate(
             "STARKNET_API_URL",
             "https://starknet-mainnet.blastapi.io/95849ee8-09e9-4e3d-88f6-8581b800c6bb/rpc/v0_7"
