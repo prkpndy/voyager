@@ -1,4 +1,7 @@
-const { fetchAndSaveTransaction } = require("./utils");
+const {
+    fetchAndSaveTransaction,
+    fetchAndSaveConversionData,
+} = require("./utils");
 
 /**
  * Handler to get N transactions starting from the given block_number and position of transaction
@@ -6,27 +9,38 @@ const { fetchAndSaveTransaction } = require("./utils");
  * @param {import("fastify").FastifyReply} reply Reply object
  */
 async function handleGetTransactions(req, reply) {
-    const PAGINATION_LIMIT = 10;
+    const PAGINATION_LIMIT = 50;
 
-    const block_number = req.query.block_number;
-    const position = req.query.position;
+    const block_number = req.query.block_number || 1e9;
+    const position = req.query.position || 0;
+    const type = req.query.type || null;
 
-    // const orderBy = ["block_number", "position"];
+    const findConditions = {
+        $or: [
+            { block_number: block_number, position: { $gt: position } },
+            { block_number: { $lt: block_number } },
+        ],
+    };
 
     // Fetch PAGINATION_LIMIT transactions from MongoDB starting from the given block_number and position of transaction
-    const result = await this.db.voyager.Transaction.find({
-        block_number: { $gte: block_number },
-        position: { $gt: position },
-    })
-        .limit(PAGINATION_LIMIT)
-        .sort({ block_number: 1, position: 1 });
+    if (type !== null) {
+        findConditions.type = {
+            $regex: new RegExp("^" + type.toLowerCase() + "$", "i"),
+        };
+    }
 
-    console.log(result);
+    const result = await this.db.voyager.Transaction.find(findConditions)
+        .limit(PAGINATION_LIMIT)
+        .sort({ block_number: -1, position: 1 });
+
+    const length = result.length;
+    const lastBlockNumber = length > 0 ? result[length - 1].block_number : 0;
+    const lastPosition = length > 0 ? result[length - 1].position : 0;
 
     return {
         transactions: result,
-        block_number: block_number,
-        position: position,
+        block_number: lastBlockNumber,
+        position: lastPosition,
     };
 }
 
@@ -38,9 +52,11 @@ async function handleGetTransactions(req, reply) {
 async function handleGetTransaction(req, reply) {
     const transactionHash = req.params.transactionHash;
 
-    const result = await this.db.voyager.Transaction.findOne({
+    let result = await this.db.voyager.Transaction.findOne({
         transaction_hash: transactionHash,
     });
+
+    result = result.toObject();
 
     if (result.fetched_all === false) {
         this.log.info(`Fetching transaction: ${transactionHash}`);
@@ -48,6 +64,8 @@ async function handleGetTransaction(req, reply) {
     } else {
         this.log.info(`Transaction already fetched: ${transactionHash}`);
     }
+
+    await fetchAndSaveConversionData(this, result);
 
     return {
         transaction: result,
