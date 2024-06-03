@@ -21,6 +21,7 @@ function fastifySequelizePlugin(fastify) {
             "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
         );
 
+        fastify.decorate("TRANSACTIONS_API_FETCH_GAP", 30e3);
         fastify.decorate(
             "STARKNET_API_URL",
             "https://starknet-mainnet.blastapi.io/95849ee8-09e9-4e3d-88f6-8581b800c6bb/rpc/v0_7"
@@ -33,6 +34,27 @@ function fastifySequelizePlugin(fastify) {
         fastify.decorate("getData", require("./getData"));
 
         await fastify.getData();
+
+        fastify.decorate("fetchDataContinuously", async () => {
+            await new Promise((resolve) =>
+                setTimeout(resolve, fastify.TRANSACTIONS_API_FETCH_GAP)
+            );
+
+            while (true) {
+                fastify.log.info(
+                    `Fetching new data from ${fastify.lastBlockFetched + 1}`
+                );
+                await fastify.getData();
+                fastify.log.info(
+                    `Done fetching new data till ${fastify.lastBlockFetched}`
+                );
+                await new Promise((resolve) =>
+                    setTimeout(resolve, fastify.TRANSACTIONS_API_FETCH_GAP)
+                );
+            }
+        });
+
+        fastify.fetchDataContinuously();
     }
 }
 
