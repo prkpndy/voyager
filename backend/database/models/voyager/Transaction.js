@@ -82,6 +82,10 @@ const transactionSchema = new mongoose.Schema({
         type: executionResourcesSchema,
         required: false,
     },
+    num_events: {
+        type: Number,
+        required: false,
+    },
 
     fetched_all: {
         type: Boolean,
