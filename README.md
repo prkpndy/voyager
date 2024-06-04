@@ -10,6 +10,8 @@ This is a clone of the Voyager application. React is used to develop the fronten
   a. `NODE_ENV` - development or production
   b. `MONGO_ATLAS_USER` - User name for MongoDB
   c. `MONGO_ATLAS_PASSWORD` - Password for MongoDB
+  d. `PORT` - Default is `3000`
+  e. `HOST` - Default is `127.0.0.1`
 4. Run the backend using `npm run dev`
 5. Run the frontend development server using `npm run dev` after updating `./frontend/src/api/config.js` with appropriate `URL_PREFIX`.
 
