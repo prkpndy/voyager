@@ -6,7 +6,6 @@ function convertWEIToETH(wei) {
 }
 
 function convertWEIToUSD(wei, WEIInUSD) {
-    console.log(WEIInUSD);
     if (isNaN(wei) || isNaN(WEIInUSD)) {
         return "-";
     }

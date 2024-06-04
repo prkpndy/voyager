@@ -35,7 +35,6 @@ export default function TransactionInfoPage() {
             if (response.ok) {
                 const data = await response.json();
                 setTransactionDetails(data.transaction);
-                console.log(data.transaction);
             } else {
                 console.log(
                     "Response not OK for fetching transaction details --- reloadAPI"
