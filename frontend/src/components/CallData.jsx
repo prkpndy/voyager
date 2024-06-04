@@ -166,7 +166,7 @@ export default function CallData({ data }) {
                             {callData?.map((value, index) => {
                                 return (
                                     <RowTransactionInfoPage
-                                        key={value}
+                                        key={index}
                                         data={[index, `"${value}"`]}
                                     />
                                 );
